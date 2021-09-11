@@ -1,0 +1,44 @@
+{
+    "words": [
+        {
+          "Word": "Batman",
+          "Type": "Fictional character",
+          "Desc": "Character from DC universe, dresses in black."
+        },
+        {
+          "Word": "The Lion The Witch and The Wardrobe",
+          "Type": "Book",
+          "Desc": "One of the books from the Chronicles of Narnia series."
+        },
+        {
+          "Word": "Loki",
+          "Type": "Fictional character",
+          "Desc": "Son of Odin."
+        },
+        {
+          "Word": "The Terminator",
+          "Type": "Movie",
+          "Desc": "Killer robot comes from the future the kill a future rebel leader."
+        },
+        {
+          "Word": "Star Wars",
+          "Type": "Movie",
+          "Desc": "Sci-fi movie franchise by George Lucas."
+        },
+        {
+          "Word": "The Beatles",
+          "Type": "Music band",
+          "Desc": "Popular band out of Liverpool."
+        },
+        {
+          "Word": "Al Pacino",
+          "Type": "Actor",
+          "Desc": "You're out of order! This whole courtroom is out of order!"
+        },
+        {
+          "Word": "Spiderman",
+          "Type": "Fictional character",
+          "Desc": "He does whatever a spider can."
+        }
+    ]
+}
