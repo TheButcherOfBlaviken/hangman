@@ -4,6 +4,8 @@ import re
 
 
 class Hangman:
+    """The entire game is contained within this class.
+    """    
 
     def __init__(self):
         """
@@ -12,13 +14,18 @@ class Hangman:
         pass
         
 
-    @staticmethod
-    def _generate_word():
+    def generate_word():
         """
         Generates a random word from a given list.
 
         Returns:
-            dict: `Word`: The word itself. `Type`: What type of of thing it is. `Desc`: More detailed description.
+            dict: A dictionary conatining the following:
+            
+                word (str): The word itself. 
+                
+                type (str): What type of of thing it is. 
+                
+                desc (str): More detailed description.
         """
         with open('words.json', 'r', encoding='utf-8') as f:
             content = f.read()
@@ -56,9 +63,13 @@ class Hangman:
 
 
     def print_hint(self, word_length, word_type, word_desc):
-        """
-        
-        """
+        """Prints the hint for the user.
+
+        Args:
+            word_length (int): Number of alphabets in the target word.
+            word_type (str): Type of the target word e.g. book, movie, song, fictional character etc.
+            word_desc (str): Detailed description of the target word.
+        """                        
         print(f"""        
                          \n======================================================================================================================
             #### Hint ####
@@ -91,7 +102,7 @@ class Hangman:
         """
         Shows initial hint to the user and the progress of the guessing after each turn.
 
-        Arguments:
+        Args:
             word (dict): dict of the generated word.
             letters (list): the guessed letters of the word at any given point in time. Initially, an empty list.
         """
@@ -172,10 +183,12 @@ class Hangman:
 
 
     def hangman(self):
-        """
-        Main function of the game.
-        """
-        self.word_data = self._generate_word()
+        """The main function of the game.
+
+        Returns:
+            str
+        """              
+        self.word_data = self.generate_word()
         self.word, self.word_length, self.word_type, self.word_desc = self._word_analyzer(self.word_data)
         
         self.matched_letters, self.guesses = [], []
