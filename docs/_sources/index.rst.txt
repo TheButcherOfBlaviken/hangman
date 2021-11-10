@@ -1,0 +1,47 @@
+.. Hangman documentation master file, created by
+   sphinx-quickstart on Sat Nov  6 02:07:27 2021.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Welcome to Hangman's documentation!
+===================================
+
+.. warning:: This game is still in development. The code is horribly incomplete and the nowhere about finished. Expect massive bugs! |:sweat_smile:|
+
+This is the documentation for the Hangman game that I have developed. Rules of hangman are pretty simple, we have all played this game when we were younger. 
+
+The entire game is one big ``class`` with multiple methods. The ``method`` :meth:`game.Hangman.hangman()` contains the whole game. Multiple static and callable methods are used throughout the :meth:`game.Hangman.hangman()` method in order to simplify the main function that really runs the game.
+
+`Click here <https://github.com/TheButcherOfBlaviken/hangman>`_  to view the full source code in my github repository.
+
+The game is contained within the  method. Multiple static met
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Contents:
+
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`
+* :ref:`search`
+
+.. autoclass:: game.Hangman
+
+.. automethod:: game.Hangman.generate_word()
+.. automethod:: game.Hangman._word_analyzer()
+.. automethod:: game.Hangman.print_hint()
+.. automethod:: game.Hangman.show_hint()
+.. automethod:: game.Hangman.hangman()
+
+
+Modules
+======= 
+  
+.. autosummary::
+   :toctree: generated
+
+   game
