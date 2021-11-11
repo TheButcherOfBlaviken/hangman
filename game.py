@@ -14,7 +14,7 @@ class Hangman:
         pass
         
 
-    def generate_word():
+    def generate_word(self):
         """
         Generates a random word from a given list.
 
