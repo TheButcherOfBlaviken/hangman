@@ -80,7 +80,7 @@ class Hangman:
 
         print("\n" + " ".join(self.matched_letters).upper())
 
-
+    @staticmethod
     def _hint_builder(self, word, word_length):
         """Builds the hint for the user.
 
@@ -111,6 +111,7 @@ class Hangman:
         self.print_hint(word_length, word_type, word_desc)
 
 
+    @staticmethod
     def _update_letters(self, matches):
         """Updates the hidden hint with the matched letters.
 
@@ -118,7 +119,7 @@ class Hangman:
             matches (list(dict)): A list contanining matched letters and their corresponding start and end indexes.
 
         Returns:
-            bool: Returns `False` if there are no matches in the word for the letter(s) guess by the user. Returns `True` otherwise.
+            bool: `False` if there are no matches in the word for the letter(s) guess by the user. `True` otherwise.
         """
         if matches:
             for match in matches:
@@ -130,6 +131,7 @@ class Hangman:
             return bool(False)
 
 
+    @staticmethod
     def _guess_matcher(self, guess, word):
         """Checks whether the guessed letter or letters matches the any of the letter(s) in the chosen word.
 
@@ -154,6 +156,7 @@ class Hangman:
             return None
 
 
+    @staticmethod
     def _input_validator(self, guess, word):
         """Checks whether the user input is valid or not. If it is an invalid entry, the function returns `False`.
             If the entry is valid, the entry is searched and matching indexes are returned.
