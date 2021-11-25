@@ -27,7 +27,7 @@ The game ends when the player finishes up all of his available chances or guesse
 
 Thanks for reaching the bottom of this documentation. x
 
-Hope you play and enjoy the game! |:smiley|
+Hope you play and enjoy the game! |:smiley:|
 
 .. _link_Installation:
 
