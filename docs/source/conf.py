@@ -73,7 +73,7 @@ sphinxemoji_style = 'twemoji'
 # Confluence
 confluence_publish = True
 confluence_page_hierarchy = True
-confluence_space_name = os.getenv('CONFLUENCE_SPACE_NAME')
+confluence_space_key = os.getenv('CONFLUENCE_SPACE_KEY')
 confluence_parent_page = os.getenv('CONFLUENCE_PARENT_PAGE')
 confluence_server_url = os.getenv('CONFLUENCE_SERVER_URL')
 confluence_server_user = os.getenv('CONFLUENCE_SERVER_USER')
