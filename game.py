@@ -170,8 +170,8 @@ class Hangman:
             word (dict): The target word str and its type, and description in a dict format.
 
         Returns:
-            bool: Returns `False` if the guess/entry is an invalid character. Otherwise calls `guess_matcher` function to match the guess with the word.
-                     Invalid characters are symbols and spaces.
+            bool: `False` if the guess/entry is an invalid character. Otherwise calls `guess_matcher` function to match the guess with the word. 
+            Invalid characters are symbols and spaces.
         """
         invalid_inputs = re.compile(r'[^a-zA-Z0-9]')
 
