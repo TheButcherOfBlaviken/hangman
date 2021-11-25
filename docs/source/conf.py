@@ -14,12 +14,12 @@ import os
 import sys
 import pathlib
 
-from dotenv import loadenv
+from dotenv import load_dotenv
 
 sys.path.insert(0, pathlib.Path(__file__).parents[2].resolve().as_posix())
 
 env_path = pathlib.Path('../../', '.env')
-loadenv(dotenv_path=env_path)
+load_dotenv(dotenv_path=env_path)
 
 # -- Project information -----------------------------------------------------
 
