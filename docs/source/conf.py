@@ -79,4 +79,3 @@ confluence_server_url = os.getenv('CONFLUENCE_SERVER_URL')
 confluence_server_user = os.getenv('CONFLUENCE_SERVER_USER')
 confluence_server_pass = os.getenv('CONFLUENCE_SERVER_PASS')
 
-

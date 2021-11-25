@@ -66,4 +66,3 @@ Modules
    :toctree: generated
 
    game
-
