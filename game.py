@@ -115,15 +115,15 @@ class Hangman:
         """Updates the hidden hint with the matched letters.
 
         Args:
-            matches (list(dict)): A list contanining matched letters and their indexes as individual dictionaries.
+            matches (list(dict)): A list contanining matched letters and their corresponding start and end indexes.
 
         Returns:
             bool: Returns `False` if there are no matches in the word for the letter(s) guess by the user. Returns `True` otherwise.
         """
         if matches:
             for match in matches:
-                for value in match['Indexes']:
-                    self.matched_letters[value] = match['Guess']
+                for x, y in match['Indexes']:
+                    self.matched_letters[x:y] = match['Guess']
             return bool(True)
         
         else:
@@ -145,8 +145,7 @@ class Hangman:
         matches = pattern.finditer(word)
 
         matched = []
-        # if len(guess) == 1:
-        indexes = [match.start() for match in matches if match]
+        indexes = [(match.start(), match.end()) for match in matches if match]
         if indexes:
             match_and_indexes = {'Guess': guess, 'Indexes': indexes}
             matched.append(match_and_indexes)
@@ -154,17 +153,14 @@ class Hangman:
         else:
             return None
 
-        # What if someone guesses the whole thing?
-        # elif len(guess) > 1:
-        #     if pattern.fullmatch(word):
-        #         return 'Fullmatch'
-        #     else:
-        #         return is_alive == False
-
 
     def _input_validator(self, guess, word):
         """Checks whether the user input is valid or not. If it is an invalid entry, the function returns `False`.
             If the entry is valid, the entry is searched and matching indexes are returned.
+            Examples of invalid entries are:
+                1. Symbols
+                2. Special characters
+                3. Spaces 
 
         Args:
             guess (str): The letter or letters that a player guessed.
@@ -201,10 +197,6 @@ class Hangman:
                 if str("".join(self.matched_letters)).lower() != self.word.lower(): 
                     print(f"\nTries left: {tries_left}")
                     guess = input("Take a guess: ")
-                    # print("Type 'help', if you need to see the hint again.")
-                    # if guess.lower() == 'help':
-                    #     print_hint(word)
-                    # else:
                     is_input_valid = self._input_validator(guess, self.word)
                     if is_input_valid == False:
                         print("""\n====================\nPlease enter an alphanumeric character. Symbols and spaces are not allowed.\n====================\n""")
